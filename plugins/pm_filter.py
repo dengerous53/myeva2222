@@ -711,7 +711,7 @@ async def auto_filter(client, msg, spoll=False):
     await k.delete()
     
         
-    else:
+else:
         cap = f"Here is what i found for your query.{search}"
     if imdb and imdb.get('poster'):
         try:
