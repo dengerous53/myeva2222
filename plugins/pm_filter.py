@@ -706,7 +706,11 @@ async def auto_filter(client, msg, spoll=False):
             rating=imdb['rating'],
             url=imdb['url'],
             **locals()
-        )
+        ) 
+    await asyncio.sleep(10)
+    await k.delete()
+    
+        
     else:
         cap = f"Here is what i found for your query.{search}"
     if imdb and imdb.get('poster'):
