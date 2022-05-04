@@ -706,9 +706,9 @@ async def auto_filter(client, msg, spoll=False):
             rating=imdb['rating'],
             url=imdb['url'],
             **locals()
-        ) 
+        )
 
-else:
+    else:
         cap = f"Here is what i found for your query.{search}"
     if imdb and imdb.get('poster'):
         try:
