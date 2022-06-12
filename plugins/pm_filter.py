@@ -410,7 +410,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🤖 Updates', url='https://t.me/potterhub')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 For Mdisk Sand Movie Name', url='https://t.me/potterhub)
+            InlineKeyboardButton('😊 For Mdisk Sand Movie Name', url='https://t.me/potterhub')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
