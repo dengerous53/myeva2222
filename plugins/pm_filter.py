@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('Please Check spelling on Google 😡')
+            k = await query.message.edit('Do Not🚫 add Year,Language, any Word With Movie Name 😡')
             await asyncio.sleep(10)
             await k.delete()
 
