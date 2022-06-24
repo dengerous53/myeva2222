@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('Please Check spelling on Google 😡')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -768,8 +768,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that you can request here @MP_request_bot. Check your spelling")
-        await asyncio.sleep(8)
+        k = await msg.reply("Write Only Movie Name. Do Not Add Language and Year. Check your spelling")
+        await asyncio.sleep(20)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
@@ -780,7 +780,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    m = await msg.reply("I couldn't find anything related to that you can request here @MP_request_bot \nDid you mean any one of these?",
+    m = await msg.reply("Write Only Movie Name. Do not add language and year \nDid you mean any one of these?",
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(20)
     await m.delete()
