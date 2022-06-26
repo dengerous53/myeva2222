@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """  𝙷𝙴𝙻L𝙾 {},
 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 
-I Can Provide Movies, in File Format \n**For Mdisk/Online Watch Search Here - @Potter_MovieBot 😍** """
+I Can Provide Movies, in File Format. \n\nFor Mdisk/Online Watch Search Here - @Potter_MovieBot 😍 """
 
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
