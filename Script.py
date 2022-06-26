@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """ 𝙷𝙴𝙻L𝙾 {},
+    START_TXT = """** 𝙷𝙴𝙻L𝙾 {},
 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 
 I Can Provide Movies, in File Format 
 For Mdisk Search Use - @Potter_MovieBot 😍 **"""
