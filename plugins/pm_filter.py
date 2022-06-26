@@ -709,7 +709,7 @@ async def auto_filter(client, msg, spoll=False):
         )
 
     else:
-        cap = f"Here is what i found for your query.{search}"
+        cap = f"Here is what i found for your results of {search}"
     if imdb and imdb.get('poster'):
         try:
            a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
