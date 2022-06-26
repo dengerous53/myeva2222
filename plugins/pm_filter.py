@@ -135,8 +135,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('Do Not🚫 add Year,Language, any Word With Movie Name 😡')
-            await asyncio.sleep(10)
+            k = await query.message.edit('Please write Correct Spelling and Do Not Add Season or Episode  😡')
+            await asyncio.sleep(25)
             await k.delete()
 
 
@@ -768,7 +768,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Write Only Movie Name. Do Not Add Language and Year. Check your spelling")
+        k = await msg.reply("1.please Write Correct spelling /n 2.Do Not add Season or Episode")
         await asyncio.sleep(20)
         await k.delete()
         return
