@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}"
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}"
                 ),
             ]
             for file in files
@@ -73,11 +73,11 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}", url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}"
+                    text=f"{file.file_name}", url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}"
                 ),
                 InlineKeyboardButton(
                     text=f"{get_size(file.file_size)}",
-                    url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}",
+                    url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}"
                 ),
             ]
             for file in files
@@ -352,11 +352,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer(url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                await query.answer(url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}")
                 return
             elif settings['botpm']:
-                await query.answer(url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                return
+                await query.answer(url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}")
             else:
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
@@ -368,9 +367,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
-            await query.answer(url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            await query.answer(url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}")
         except Exception as e:
-            await query.answer(url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            await query.answer(url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
             await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
@@ -641,7 +640,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}"
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}"
                 ),
             ]
             for file in files
@@ -651,11 +650,11 @@ async def auto_filter(client, msg, spoll=False):
             [
                 InlineKeyboardButton(
                     text=f"{file.file_name}",
-                    url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}",
+                    url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}",
                 ),
                 InlineKeyboardButton(
                     text=f"{get_size(file.file_size)}",
-                    url=f"https://shorturllink.in/st?api=638bea22e5b27f9420265c902cb1051100513daa&url=https://t.me/{temp.U_NAME}?start={ident}_{file_id}",
+                    url=f"https://shorturllink.in/api?api=d22152f4a53297536e1535f98593a30f1dadf8fe&url=yourdestinationlink.com&alias=CustomAlias&format=text?start={ident}_{file_id}",
                 ),
             ]
             for file in files
